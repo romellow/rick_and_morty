@@ -20,17 +20,11 @@ class Pages extends React.Component {
           isLoaded: true,
           items: data.pages
         });
-      },
-      (error) => {
-        this.setState({
-          isLoaded: true,
-          error
-        });
       }
     );
   }
   render() {
-    const { error, isLoaded, items } = this.state;
+    const {isLoaded, items } = this.state;
     if (error) {
       return <div> Ошибка : {error.message}</div>;
     }else if (!isLoaded){

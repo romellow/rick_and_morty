@@ -35,16 +35,18 @@ class CharList extends React.Component {
         return <div> Ошибка : {error.message}</div>;
       } else if (!isLoaded) {
         return <div>Загрузка ... </div>;
-      } else {
-          return items.map((char) => (
-            <>
-            <ul className="charList">
-              <li key={char.id}>{char.name}</li>
-              <img alt={char.name} src={char.image} className="avatar"></img>
-            </ul>
-            </>
-          ));
       }
+      return (
+        <ul className="charList">
+          {items.map((char) =>(
+            <>
+            <li key={char.id}><p>{char.name}</p>
+            <img alt={char.name} src={char.image} className="avatar"></img>
+            </li>
+            </>
+          ))}
+        </ul>
+      )
     }
   }
 

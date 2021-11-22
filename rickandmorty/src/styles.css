@@ -37,7 +37,8 @@ dd {
   box-shadow: 5px 3px 16px black;
 }
 .charList{
-  display: inline-block;
+  display: flex;
+  flex-wrap:wrap;
   width: 150px;
 }
 .charList > li{
