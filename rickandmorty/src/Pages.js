@@ -44,4 +44,5 @@ class Pages extends React.Component {
     }
   }
 }
+
 export default Pages;
